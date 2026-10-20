@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    padding: 30px 15px;
+}
+
+/* Khung chính */
+#notifications-page {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+/* Tiêu đề */
+.page-title {
+    padding: 24px;
+    font-size: 26px;
+    border-bottom: 1px solid #e4e6eb;
+}
+
+/* Một thông báo */
+.notification {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 92px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.notification:hover {
+    background-color: #f5f6f7;
+}
+
+/* Thông báo chưa đọc */
+.notification.unread {
+    background-color: #eef6ff;
+}
+
+.notification.unread:hover {
+    background-color: #e2efff;
+}
+
+/* Dấu chấm xanh */
+.notification.unread::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    background-color: #1877f2;
+    border-radius: 50%;
+}
+
+/* Avatar */
+.notification-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #1877f2;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* Nội dung thông báo */
+.notification-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 15px;
+}
+
+.notification-text {
+    color: #65676b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.username {
+    color: #1c1e21;
+    font-weight: 600;
+}
+
+.notification.unread .notification-text {
+    color: #1c1e21;
+    font-weight: bold;
+}
+
+/* Nội dung bài viết */
+.caption {
+    margin-top: 5px;
+    color: #65676b;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Thời gian và ngày */
+.notification-time {
+    width: 125px;
+    flex-shrink: 0;
+    margin-left: 12px;
+    text-align: right;
+}
+
+.time-minutes {
+    display: block;
+    color: #65676b;
+    font-size: 12px;
+}
+
+.time-date {
+    display: block;
+    margin-top: 5px;
+    color: #8a8d91;
+    font-size: 12px;
+}
+
+.notification.unread .time-minutes {
+    color: #1877f2;
+    font-weight: bold;
+}
+
+/* THANH PHÂN TRANG */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 22px 15px;
+    border-top: 1px solid #e4e6eb;
+    background-color: white;
+}
+
+/* Nút trang */
+.page-button {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+    color: #5298ed;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.page-button:hover:not(:disabled):not(.active) {
+    background-color: #eef6ff;
+}
+
+.page-button.active {
+    background-color: #5298ed;
+    color: white;
+}
+
+.page-button:disabled {
+    color: #d5dce3;
+    cursor: not-allowed;
+}
+
+.page-ellipsis {
+    color: #5298ed;
+    font-size: 20px;
+    padding: 0 2px;
+}
+
+/* Điện thoại */
+@media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+
+    #notifications-page {
+        border-radius: 0;
+    }
+
+    .page-title {
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .notification {
+        padding: 14px 15px;
+        min-height: 85px;
+    }
+
+    .notification-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .notification-content {
+        margin-left: 10px;
+    }
+
+    .notification-time {
+        width: 85px;
+        margin-left: 6px;
+    }
+
+    .time-minutes,
+    .time-date {
+        font-size: 11px;
+    }
+
+    .notification-text {
+        font-size: 13px;
+    }
+
+    .caption {
+        font-size: 12px;
+    }
+
+    #pagination {
+        gap: 4px;
+        padding: 18px 8px;
+    }
+
+    .page-button {
+        min-width: 36px;
+        height: 38px;
+        padding: 0 7px;
+        font-size: 17px;
+    }
+}
