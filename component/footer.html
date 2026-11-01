@@ -1,5 +1,265 @@
-<footer>
-    <div class="footer-wrapper">
-        <p>&copy; 2026 Website của bạn. Tất cả quyền được bảo lưu.</p>
-    </div>
-</footer>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Replica</title>
+    <!-- FontAwesome cho các icon mạng xã hội và icon mũi tên -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f4f9;
+        }
+        /* Container tổng của Footer */
+        
+        .footer-container {
+            position: relative;
+            background-color: #007bff;
+            /* Đã thay đổi thành màu #007bff */
+            color: #ffffff;
+            padding-top: 40px;
+        }
+        /* Phần nội dung chính của Footer */
+        
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+        
+        .footer-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+        /* 3 Cột liên kết điều hướng */
+        
+        .footer-links {
+            display: flex;
+            gap: 60px;
+        }
+        
+        .link-column ul {
+            list-style: none;
+        }
+        
+        .link-column li {
+            margin-bottom: 16px;
+        }
+        
+        .link-column a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        
+        .link-column a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        /* Phần Tiêu đề chính bên phải */
+        
+        .footer-heading {
+            text-align: left;
+        }
+        
+        .footer-heading span {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-heading h1 {
+            font-size: 72px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+        /* Đường kẻ nét đứt phân cách */
+        
+        .footer-divider {
+            border: none;
+            border-top: 1px dashed rgba(255, 255, 255, 0.4);
+            margin-bottom: 30px;
+        }
+        /* Phần đáy Footer */
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        
+        .legal-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .legal-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .legal-links a:hover {
+            opacity: 1;
+        }
+        /* Các Icon mạng xã hội */
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        
+        .social-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+        /* Nút Cuộn Lên Đầu Trang (Back to Top) */
+        
+        .back-to-top {
+            position: absolute;
+            bottom: 30px;
+            left: 5%;
+            width: 48px;
+            height: 48px;
+            background-color: #ffffff;
+            color: #007bff;
+            /* Thay đổi màu icon thành #007bff */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s;
+        }
+        
+        .back-to-top:hover {
+            background-color: #f0f0f0;
+        }
+        /* Responsive cho thiết bị di động */
+        
+        @media (max-width: 768px) {
+            .footer-body {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .footer-links {
+                gap: 30px;
+            }
+            .footer-heading h1 {
+                font-size: 48px;
+            }
+            .footer-bottom {
+                flex-direction: column-reverse;
+                gap: 20px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BẮT ĐẦU FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Logo trang web -->
+            <div class="logo">w.</div>
+
+            <!-- Khối thông tin liên kết chính -->
+            <div class="footer-body">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <ul>
+                            <li><a href="#">Websites</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Elements</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <ul>
+                            <li><a href="#">Academy</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Market</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-heading">
+                    <span>GOT A PROJECT IN MIND?</span>
+                </div>
+            </div>
+
+            <!-- Đường kẻ ngang phân cách -->
+            <hr class="footer-divider">
+
+            <!-- Thanh pháp lý & Mạng xã hội ở dưới cùng -->
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="#">Cookies Policy</a>
+                    <a href="#">Legal Terms</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút Back to top ở góc dưới bên trái -->
+        <a href="#" class="back-to-top" aria-label="Trở lên đầu trang">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </footer>
+
+</body>
+
+</html>
