@@ -40,6 +40,7 @@ function GetLocalStorage() {
     return name
 }
 
+
 // function LuuAnhVaoAssets(ten, thoigian) {
 //     const nameanh = "anh" + ten + thoigian;
 //     const pathanh = "../assets/" + nameanh;
