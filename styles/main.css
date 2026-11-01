@@ -13,7 +13,9 @@ body {
     color: #333;
 }
 
+
 /* Container chính */
+
 .container {
     flex: 1;
     max-width: 1200px;
@@ -22,12 +24,14 @@ body {
     padding: 0 15px;
 }
 
+
 /* Styles cho Header */
+
 header {
     background-color: #007bff;
     color: white;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -50,12 +54,15 @@ nav a {
     transition: opacity 0.2s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     text-decoration: underline;
     opacity: 0.9;
 }
 
+
 /* Styles cho Footer */
+
 footer {
     background-color: #343a40;
     color: white;
@@ -64,23 +71,27 @@ footer {
     margin-top: auto;
 }
 
+
 /* Thẻ card chung cho trang */
+
 .card {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
 }
 
+
 /* Form Login */
+
 .login-box {
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -111,4 +122,16 @@ footer {
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+.post-ui {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    /* Thuộc tính giúp main-content tự động mở rộng theo nội dung và co giãn linh hoạt */
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
